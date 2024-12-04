@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #fc806a, #90acda);
+}
+
+.calculator {
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#display {
+    width: 100%;
+    padding: 15px;
+    font-size: 2.5rem;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+    text-align: right;
+    border-bottom: 2px solid hsl(0, 0%, 30%);
+    outline: none; /* Removes the blue border on focus */
+    box-sizing: border-box; /* Ensures padding doesn’t overflow */
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 50%);
+    transform: scale(1);
+}
+
+.operator-btn {
+    background-color: hsl(35, 100%, 55%);
+}
+
+.operator-btn:hover {
+    background-color: hsl(35, 100%, 65%);
+}
+
+.operator-btn:active {
+    background-color: hsl(35, 100%, 75%);
+}
+
+@media (max-width: 768px) {
+    #display {
+        font-size: 1.8rem;
+        padding: 8px;
+    }
+
+    #keys {
+        gap: 8px;
+    }
+
+    button {
+        font-size: 1.2rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px; /* Smaller font size for buttons */
+    }
+}
+
+/* Media query for very small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+    #display {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+
+    button {
+        font-size: 1rem; /* Even smaller text for compact view */
+    }
+}
